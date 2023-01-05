@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="zoey logo navbrand transparent.png">
+  <link rel="stylesheet" href="zoey cafe.css">
+  <title>Zoey Café Rates</title>
+<style>
+    body {
+        background-color: rgba(252,254,255);
+        scroll-behavior: smooth;
+        max-width: 100%;
+    }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .closebtn {
+        float: right;
+        color: black;
+        font-size: 35px;
+        cursor: pointer;
+    }
+    .card {
+        border-radius: 2vw;
+        box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+    }
+</style>
+</head>
+<body>
+<!---START OF TOPNAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="margin: 0; padding: 1; background-color: rgba(241, 111, 35);">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon" style="font-size: 2vh;"></span>
+            </button>
+                <span id="navbarbrandlogo"><a class="navbar-brand d-flex" href="index.html"><img src="zoey_main_logo.jpg" alt="Zoey Logo" width="65" height="30" padding="0" margin="0"></a></span>
+            <span id="callandemailicon1"> <!---socialmediaicons for MD SM screens-->
+                <a href="tel:+639177084448"><i class='fa fa-phone' style="color: white; padding-left: 1vw;"></i></a>
+                <a href="mailto:zoey_cafe@yahoo.com"><i class='fa fa-envelope-o' style="color: white; padding-left: 2vw;"></i></a>
+                <a href="https://www.facebook.com/zoeycafe/" target="_blank"><i class="fa fa-facebook" style="padding-left: 2vw;"></i></a>
+                <a href="https://www.instagram.com/zoeycafe/?hl=en" target="_blank"><i class="fa fa-instagram"  style="padding-left: 2vw;"></i></a>
+            </span>
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <h6><a class="nav-link" href="index.html">HOME</a></h6>
+                </li>
+                <li class="nav-item">
+                    <h6><a class="nav-link" href="Zoey Cafe Dining Page.html">DINING</a></h6>
+                </li>  
+                <li class="nav-item">
+                    <h6><a class="nav-link" href="Zoey Cafe Catering Page.html">CATERING</a></h6>
+                </li>
+                <li class="nav-item">
+                    <h6><a class="nav-link" href="Zoey Cafe Our Story Page.html">OUR STORY</a></h6>
+                </li>
+                <li class="nav-item">
+                    <h6><a class="nav-link" href="Zoey Cafe Branches Page.html">BRANCHES</a></h6>    
+                </li>
+                <li class="nav-item">
+                    <h6><a class="nav-link" href="Zoey Cafe Rates Page.html">RATES</a></h6>
+                </li>
+                <li class="nav-item">
+                    <h6><a class="nav-link" href="Zoey Cafe Contact Page.html">CONTACT</a></h6>
+                </li>
+            </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="text" placeholder="Search" style="border-radius: 20px;">
+            <button class="btn" type="button" id="searchbutton">SEARCH</button>
+        </form>
+        </div>
+            <span id="callandemailicon2"> <!---socialmediaicons for LG screens-->
+                <a href="tel:+639177084448"><i class='fa fa-phone' style="color: white; padding-left: 1vw;"></i></a>
+                <a href= "mailto:zoey_cafe@yahoo.com"><i class='fa fa-envelope-o' style="color: white; padding-left: 1vw;"></i></a>
+                <a href="https://www.facebook.com/zoeycafe/" target="_blank"><i class="fa fa-facebook" style="padding-left: 1vw;"></i></a>
+                <a href="https://www.instagram.com/zoeycafe/?hl=en" target="_blank"><i class="fa fa-instagram"  style="padding-left: 1vw;"></i></a>
+            </span>
+        </div>
+    </nav>
+<!---END OF TOPNAVBAR---->
+<!---START OF CONTENT---->
+<!---SUBHEADER IMG LG Screen-->
+<div class="rates d-none d-md-flex" id="ratescontainerIMG">
+</div>
+
+<!---SUBHEADER IMG MD SM Screen-->
+<div class="rates d-flex d-md-none" id="ratescontainerIMGsm">
+</div>
+<!---START of Header-->    
+<div class="container-fluid" id="headerwithlinebreak"><br>
+    <span class="text-gray" id="exploreoffer"><b>Our Prices & Rates</b></span><br>
+    <center><img class="d-none d-md-flex" src="line break black.png" alt="line break"></center>
+    <center><img class="d-flex d-md-none" src="line break black small.png" alt="line break"></center>
+</div>
+<!---END of Header-->
+<!---START of Header Tabs-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3" id="colrates" onclick="openTab('b1');"><b>Our Rates</b>
+        </div>
+        <div class="col-3" id="colrates" onclick="openTab('b2');"><b>Additional Services</b>
+        </div>
+        <div class="col-3" id="colrates" onclick="openTab('b3');"><b>Terms and Conditions</b>
+        </div>
+        <div class="col-3" id="colrates" onclick="openTab('b4');"><b>Choose My Dishes</b>
+        </div>
+    </div>
+<!---CONTENT FOR TAB b1------------------------->    
+    <div id="b1" class="containerTab">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn" style="font-size: 3vw;">×</span>
+        <p style="font-size: 2vw;"><b>Catering Rates</b></p>
+            <table class="table-responsive-md table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 15vw;">No. of Pax</th>
+                        <th scope="col">Rates per Pax</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <td>10-15 persons</td>
+                            <td>650php per person</td>
+                        </tr>
+                        <tr>
+                            <td>20-25 persons</td>
+                            <td>550php per person</td>
+                        </tr>
+                        <tr>
+                            <td>30-35 persons</td>
+                            <td>480php per person</td>
+                        </tr>
+                        <tr>
+                            <td>40-45 persons</td>
+                            <td>420php per person</td>
+                        </tr>
+                        <tr>
+                            <td>50-60 persons</td>
+                            <td>400php per person</td>
+                        </tr>
+                        <tr>
+                            <td>65-95 persons</td>
+                            <td>370php per person</td>
+                        </tr>
+                        <tr>
+                            <td>100-120 persons</td>
+                            <td>340php per person</td>
+                        </tr>
+                    </tbody>
+                </table>
+        <p style="padding: 1vh;">- Multiply the Rates per Pax to the actual number of pax of your event</p>
+            <div class="row">
+                <p><b>**Rates are already INCLUSIVE of ALL of the following:</b></p>
+                    <div class="col-5" style="padding: 0px; margin: 0px;">    
+                        <ul style="padding-left: 5vw;">
+                            <li>4 hours use of Venue</li>
+                            <li>2 Main Course Dishes</li>
+                            <li>1 Vegetable OR Pasta Dish</li>
+                            <li>1 Salad Dish</li>
+                        </ul>    
+                    </div>
+                    <div class="col-6" style="padding: 0px; margin: 0px;">
+                        <ul style="padding-left: 2vw;">
+                            <li>2 Dessert Dishes</li>
+                            <li>1 Round of Beverage</li>
+                            <li>Rice</li>
+                            <li>Sound System with 2 Microphones</li>
+                        </ul>
+                    </div>
+                    <p>Click on <span style="font-family: papyrus; background-color: gainsboro; background:radial-gradient(ellipse,rgb(177, 175, 175), rgb(223, 219, 219), rgb(236, 235, 235));"><b>Choose My Dishes</b></span> grey tab above for your choice of dishes.</p>
+            </div><br>            
+        <p style="font-size: 2vw;"><b>Corkage Fees</b></p>
+            <table class="table-responsive-md table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 10vw;">Price</th>
+                        <th scope="col">Items</th>
+                    </tr>
+                    </thead>
+                        <tbody>
+                            <tr>
+                                <td>20php</td>
+                                <td>per Dish brought in from outside</td>
+                            </tr>
+                            <tr>
+                                <td>300php</td>
+                                <td>per Lechon brought in from outside</td>
+                            </tr>
+                            <tr>
+                                <td>300php</td>
+                                <td>Softdrinks/Beer/Liquor brought in from outside</td>
+                            </tr>
+                            <tr>
+                                <td>200php</td>
+                                <td>per Dessert/Cake brought in from outside</td>
+                            </tr>
+                            <tr>
+                                <td>500php</td>
+                                <td>Desserts Buffet/Liquor Bar brought in from outside</td>
+                            </tr>
+                        </tbody>
+            </table><br><br>
+        <!-- Button trigger modal for Zoey Contract -->
+        <p>We will need a copy of the <b>Zoey Cafe Catering Contract</b> with your <u>signature</u>, together with the <u>downpayment</u> to secure your reservation & booking ahead of time. You may drop by at the Ubaldo Branch, or download/print a copy of the contract (please click below).</p>    
+        <div class="container" id="modalcontainer" style="padding-left: 2vw;">
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal" style="font-size: 2vh; color: white"><b>View Contract</b></button>
+    
+    <!-- Modal for Zoey Contract-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" id="exampleModalLabel" style="color:black;">Zoey Cafe, Co. Contract for Catering</h6>
+                    <button type="button" class="close" data-dismiss="modal"aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+            <div class="modal-body"> 
+                <iframe src="Zoey Cafe Contract for Download.pdf" width="100%" height="400px"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div><br>    
+    <p style="margin-left: 1vw;"><b>*We accept cash, post-dated cheques, credit cards (online payment thru Paypal or on-site swiping), online mode payments like Gcash, Paymaya, Paypal</b></p>
+    <br>
+    </div>
+<!---CONTENT FOR TAB b2------------------------->    
+    <div id="b2" class="containerTab" style="display: none;">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn" style="font-size: 3vw;">×</span>
+            <p style="font-size: 2vw;"><b>Outside Catering</b></p>
+                <ul>
+                    <li>additional 10% from gross price for service charge and transportation costs</li>
+                    <li>additional charge for mobilization fee for outside-city venues (starts at 1000php)</li>
+                    <li>only buffet table, equipment and services are included. Tables and chairs are not included</li>
+                    <li>catering services are only good for 4 hours from agreed time of event. Additional rates per hour will apply for every succeeding hour</li>
+                </ul><br>
+            <p style="font-size: 2vw;"><b>Tables/Chairs Fees for Outside Catering</b></p>
+                <table class="table-responsive-md table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width: 15vw;">Rates</th>
+                            <th scope="col">Items</th>
+                   
+                        </tr>
+                    </thead>
+                        <tbody>
+                            <tr>
+                                <td>150php per table</td>
+                                <td>Table with table cloth and table runner (good for 6 pax)</td>
+        
+                            </tr>
+                            <tr>
+                                <td>120php per table</td>
+                                <td>Table with table cloth and table runner (good for 4 pax)</td>
+                            </tr>
+                            <tr>
+                                <td>30php per chair</td>
+                                <td>Monoblock chair with chair cover</td>
+                            </tr>
+                        </tbody>
+                </table><br><br>
+            <p style="font-size: 2vw;"><b>Equipment Charges</b></p>
+                <table class="table-responsive-md table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width: 15vw;">Rates</th>
+                            <th scope="col">Items</th>
+                                </tr>
+                                    </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1500php per 3 hours</td>
+                                                <td>LCD Projector with Screen</td>
+        
+                                            </tr>
+                                            <tr>
+                                                <td>2000php per 2 hours</td>
+                                                <td>Additional charge for lighting effects brought inside or LED Walls</td>
+                                            </tr>
+                                        </tbody>
+                </table><br>
+    </div>
+<!---CONTENT FOR TAB b3------------------------->    
+    <div id="b3" class="containerTab" style="display: none;">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn" style="font-size: 3vw;">×</span>
+            <p style="font-size: 2vw;"><b>Terms and Conditions</b></p>
+                <ul>
+                    <li>50% Down Payment from contract price must be made upon signing and confirmation of contract or to secure booking</li>
+                    <li>50% Full Payment on the Day of the Event</li>
+                    <li>20% of the contract price will be forfeited for any cancellation made within seven (7) days prior to event date.</li>
+                    <li>30% surcharge for cancellation made within five (5) days</li>
+                    <li>50% charge for cancellation made within 3 days from event date</li>
+                    <li>100% from contract price will be charged for cancellation made on the day of the event</li>
+                    <li>Zoey Cafe, Co. is not liable for any food provided by the client that may cause hazard for human consumption. A waiver form must be signed by the client for any food brought to the event.
+                    <li>Any losses, breakages of the caterer's equipment during the event will be charged to our client accordingly</li>
+                    <li>Surcharge of 2000php for rebooking/change of event three (3) days prior to the original event date</li>
+                    <li>Event will include four (4) hours use of the venue. Any succeeding hour will be charged 2000php accordingly; for events past 10:00pm, the charge shall be 3000php per hour</li>            
+                    </li>
+                </ul><br>
+    </div>
+<!---CONTENT FOR TAB b4------------------------->
+    <div id="b4" class="containerTab" style="display: none;">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn" style="font-size: 3vw;">×</span>
+        <div class="container" id="choosemydishcontainer">
+            <div class="row">
+                <p style="margin-top: 2vh;"><b>Rates per Pax are already INCLUSIVE of ALL of the following:</b></p>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <ul>
+                        <li>2 Main Course Dishes</li>
+                        <li>1 Vegetable OR Pasta Dish</li>
+                        <li>1 Salad Dish</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul>
+                        <li>2 Dessert Dishes</li>
+                        <li>1 Beverage</li>
+                        <li>If needed, Add-On Kiddie Meals (for children)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>    
+        <!---CHOOSE MY DISH SECTION-------------------------------->
+        <button class="tablink" onclick="openPage('maincoursetab', this, 'rgba(241, 111, 35)')" id="defaultOpen">Main Course</button>
+        <button class="tablink" onclick="openPage('vegetableorpasta', this, 'rgba(241, 111, 35)')">Vegetable or Pasta</button>
+        <button class="tablink" onclick="openPage('salad', this, 'rgba(241, 111, 35)')">Salad</button>
+        <button class="tablink" onclick="openPage('dessert', this, 'rgba(241, 111, 35)')">Dessert</button>
+        <button class="tablink" onclick="openPage('beverage', this, 'rgba(241, 111, 35)')">Beverage</button>
+        <button class="tablink" onclick="openPage('kiddiemealpackages', this, 'rgba(241, 111, 35)')">Kiddie Meal Packages</button>
+        <!---FIRST TAB Main Course Beef Chicken Seafood-------------------------------->      
+        <div id="maincoursetab" class="tabcontent">
+    <div class="container" id="maincoursecontainer">
+      <div class="row" style="padding: 2vh; text-align: center;"><h5>2 Main Course Dishes Included (you can select 2 different, or 2 of the same kind of meat).<br>Options are the following below:</h5></div>
+      <div class="row">
+        <!---Main Course FIRST COLUMN Beef-->
+        <div class="col-4 border">
+          <div class="row" id="maincourseheader"><p>BEEF</p><br>
+          </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="beef"><br>
+                  <div class="row" id="maincourserow"><span><img src="beefbrocolli img.jpg" alt="beefbrocolli"><span id="maincoursefont">Beef with Brocolli</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="beefstroganoff img.jpg" alt="beefstroganoff" id=""><span id="maincoursefont">Beef Stroganoff</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="braisedbeef img.jpg" alt="braisedbeef" id=""><span id="maincoursefont">Braised Beef Short Plate</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="beefpotroast img.jpg" alt="beefpotroast" id=""><span id="maincoursefont">Beef Pot Roast</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="callos img.jpg" alt="callos" id=""><span id="maincoursefont">Callos (**with Pork)</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="roastbeefbrisket img.jpg" alt="roastbeefbrisket" id=""><span id="maincoursefont">Roast Beef Brisket with Gravy</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="karekare img.jpg" alt="karekare" id=""><span id="maincoursefont">Kare Kare</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="lenguamushroomsauce img.jpg" alt="lengua" id=""><span id="maincoursefont">Lengua in Mushroom Sauce</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="beeffritosteriyakisauce img.jpg" alt="beeffritos" id=""><span id="maincoursefont">Beef Fritos with Teriyaki Sauce</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="mongolianbeef img.jpg" alt="mongolianbeef" id=""><span id="maincoursefont">Mongolian Beef</span></span></div>
+                </div>    
+              </div>
+            </div>
+        </div>
+        <!---Main Course SECOND COLUMN Chicken-->  
+        <div class="col-4 border">
+          <div class="row" id="maincourseheader"><p>CHICKEN</p><br>
+          </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="chicken"><br>
+                  <div class="row" id="maincourserow"><span><img src="buffalowings img.jpg" alt="buffalowings"><span id="maincoursefont">Buffalo Wings Assorted</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="grilledchickenteriyaki img.png" alt="grilledchickenteriyaki"><span id="maincoursefont">Grilled Chicken Teriyaki</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="cheezyafritada img.jpg" alt="cheezyafritada"><span id="maincoursefont">Cheezy Afritada</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="chickencurry img.jpg" alt="chickencurry"><span id="maincoursefont">Chicken Curry</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="danesfried chicken img.jpg" alt="danesfriedchicken"><span id="maincoursefont">Dane's Fried Chicken</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="herbroastchicken img.jpg" alt="herbroastchicken"><span id="maincoursefont">Herb Roast Chicken</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="zoeyfriedchicken img.jpg" alt="zoeyfriedchicken img"><span id="maincoursefont">Zoey's Fried Chickeen</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="honeyglazedchicken img.jpg" alt="honeyglazedchicken"><span id="maincoursefont">Honey Glazed Chicken</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="soygarlicchicken img.jpg" alt="soygarlicchicken"><span id="maincoursefont">Soy Garlic Chicken</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="creamytuscanchicken img.jpg" alt="creamytuscanchicken"><span id="maincoursefont">Creamy Tuscan Chicken</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="breadedchickenteriyaki img.JPG" alt="breadedchickenteriyaki"><span id="maincoursefont">Breaded Chicken Teriyaki</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="saucyhotwings img.jpg" alt="saucyhotwings"><span id="maincoursefont">Saucy Hot Wings</span></span></div>
+                </div>    
+              </div>
+            </div>
+        </div>
+        <!---Main Course THIRD COLUMN Seafood-->
+        <div class="col-4 border">
+          <div class="row" id="maincourseheader"><p>SEAFOOD</p><br>
+          </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="seafood"><br>
+                  <div class="row" id="maincourserow"><span><img src="sweetsourfishfillet img.jpg" alt="sweetsourfishfillet"><span id="maincoursefont">Sweet & Sour Fish Fillet</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="grilledtangigue img.jpg" alt="grilledtangigue"><span id="maincoursefont">Grilled Tangigue with Lemon Butter</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="grilledtunabelly img.jpg" alt="grilledtunabelly"><span id="maincoursefont">Grilled Tuna Belly</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="seafoodplatter img.jpg" alt="seafoodplatter"><span id="maincoursefont">Seafood Platter</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="spicyseafood img.jpg" alt="spicyseafood"><span id="maincoursefont">Spicy Seafood</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="fishfilletwithbrocolli img.JPG" alt="sauteedfishfillet"><span id="maincoursefont">Sauteed Fish Fillet with Brocolli</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="breadedfishsteakingravy img.jpg" alt="breadedfishsteakgravy"><span id="maincoursefont">Breaded Fish Steak in Gravy Sauce</span></span></div>
+                  <div class="row" id="maincourserow"><span><img src="breadedfishsteakintartar img.jpg" alt="breadedfishsteaktartar"><span id="maincoursefont">Breaded Fish Steak in Tartar Sauce</span></span></div>
+                </div>    
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="row" style="padding: 2vh; text-align: justify;"><h5>Additional Dish - if you want to have additional Main Course dish instead of just 2, add the following rates below to your chosen price/per pax contract:</h5>
+        <ul style="padding-left: 6vh; padding-right: 6vh; text-align: justify;"> 
+          <li>Per Main Course added (whether beef, chicken or seafood) - add Php90 per person</li>
+          <li>If additional Roast Beef - price upon request</li>
+          <li>If requesting Lechon - price upon request</li>
+        </ul>
+        <h6 style="text-align: justify;">Ex: Chosen price/per pax contract: Php340 (100-125pax), add Php90 per pax to have 3 Main Course Dishes instead of just 2</h6>
+        <h6>Total Price per Pax = Php430 per pax</h6>
+      </div>      
+    </div>    
+        </div>
+        <!---SECOND TAB Vegetable or Pasta--------------------------------------------->
+        <div id="vegetableorpasta" class="tabcontent">    
+    <div class="container" id="vegetableorpastacontainer">
+      <div class="row" style="padding: 2vh; text-align: center;"><h5>1 Vegetable OR Pasta Dish Included.<br>Options are the following below:</h5></div>
+      <div class="row">
+      <!---Vegetable or Pasta FIRST COLUMN-->
+        <div class="col-6 border">
+          <div class="row" id="vegetableorpastaheader"><p>VEGETABLE</p><br>
+          </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="vegetable"><br>
+                  <div class="row" id="vegetableorpastarow"><span><img src="bam i special img.jpg" alt="bam-i-special img"><span id="vegetableorpastafont">Bam-I Special</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="ricenoodleswithmixedveggie.jfif" alt="ricenoodleswithmixedveggie img"><span id="vegetableorpastafont">Rice Noodles with Mixed Veggies</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="chickensotanghonguisado img.jpg" alt="chickensotanghonguisado img"><span id="vegetableorpastafont">Chicken Sotanghon Guisado</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="vegetablesamosa img.jpg" alt="vegetablesamosa img"><span id="vegetableorpastafont">Vegetable Samosa</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="vietnamesespringrolls img.jpg" alt="vietnamesespringrolls img"><span id="vegetableorpastafont">Vietnamese Rolls</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="vegetablespringroll img.jfif" alt="vegetablespringroll img"><span id="vegetableorpastafont">Vegetable Spring Rolls</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="curriedtejwanivegetable img.jfif" alt="curriedtejwanivegetable img"><span id="vegetableorpastafont">Curried Tejwani Vegetables</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="mixedseafoodwithvegetables img.jfif" alt="mixedseafoodwithvegetables img"><span id="vegetableorpastafont">Mixed Seafood Vegetables</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="fourseasonvegetables img.jpg" alt="fourseasonvegetables img"><span id="vegetableorpastafont">Four Season Vegetables</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="chickenchopseuy img.webp" alt="chickenchopseuy img"><span id="vegetableorpastafont">Chicken Chopseuy</span></span></div>
+                </div>    
+              </div>
+            </div>
+        </div>
+        <!---Vegetable or Pasta SECOND COLUMN-->  
+        <div class="col-6 border">
+          <div class="row" id="vegetableorpastaheader"><p>PASTA</p><br>
+          </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="pasta"><br>
+                  <div class="row" id="vegetableorpastarow"><span><img src="aglioolio img.jfif" alt="aglioolio img"><span id="vegetableorpastafont">Aglio Olio (Vegetarian-friendly or with Shrimps)</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="pastaputtanesca img.jpg" alt="pastaputtanesca img"><span id="vegetableorpastafont">Pasta Puttanesca (Vegetarian-friendly)</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="bakedchickenmacaroni img.jpg" alt="bakedchickenmacaroni img"><span id="vegetableorpastafont">Baked Chicken Macaroni</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="bakedpenne img.jpg" alt="bakedpenne img"><span id="vegetableorpastafont">Baked Penne</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="chickenalfredocarbonara img.jpg" alt="chickenalfredocarbonara img"><span id="vegetableorpastafont">Chicken Alfredo (Carbonara)</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="creamychickenpesto img.jfif" alt="creamychickenpesto img"><span id="vegetableorpastafont">Creamy Chicken Pesto</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="trufflemushroompasta img.webp" alt="trufflemushroompasta img"><span id="vegetableorpastafont">Truffle Mushroom Pasta</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="lasagna img.jpg" alt="lasagna img"><span id="vegetableorpastafont">Lasagna</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="spaghetti img.jpg" alt="spaghetti img"><span id="vegetableorpastafont">Spaghetti</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="spanishsardineslinguine img.webp" alt="spanishsardineslinguine img"><span id="vegetableorpastafont">Spanish Sardines Linguine</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="creamyseafoodalfredo img.webp" alt="creamyseafoodalfredo img"><span id="vegetableorpastafont">Creamy Seafood Alfredo</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="seafoodnoodles img.webp" alt="seafoodnoodles img"><span id="vegetableorpastafont">Seafood Noodles</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="spinachandbluecheesepasta img.webp" alt="spinachandbluecheesepasta img"><span id="vegetableorpastafont">Spinach & Blue Cheese Pasta</span></span></div>
+                  <div class="row" id="vegetableorpastarow"><span><img src="carbonarawithpork img.webp" alt="carbonarawithpork img"><span id="vegetableorpastafont">Carbonara (**with Pork)</span></span></div>
+                </div>    
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="row" style="padding: 2vh; text-align: justify;"><h5>Additional Dish - if you want to have 2 or more Vegetable/or Pasta dishes instead of just 1, add the following rates below to your chosen price/per pax contract:</h5>
+        <ul style="padding-left: 6vh; padding-right: 6vh; text-align: justify;">
+          <li>Vegetable - add Php60 per person</li>
+          <li>Pasta - add Php70 per person</li>
+        </ul>
+        <h6 style="text-align: justify;">Ex: Chosen price/per pax contract: Php340 (100-125pax), add Php60 per pax to have 2 Vegetable Dishes instead of just 1</h6>
+        <h6>Total Price per Pax = Php400 per pax</h6>
+      </div>      
+    </div>
+        </div>
+        <!---THIRD TAB Salad-----------------------------------------------------------> 
+        <div id="salad" class="tabcontent">
+    <!---Salad COLUMN-->    
+    <div class="container" id="saladcontainer">
+      <div class="row" style="padding: 2vh; text-align: center;"><h5>1 Salad Dish Included.<br>Options are the following below: </h5></div>
+      <div class="row">
+        <div class="col border">
+          <div class="row" id="saladheader"><p>SALAD</p><br>
+          </div>
+            <div class="row">
+              <div class="col">
+                <div class="salad"><br>
+                  <div class="row" id="saladrow"><span><img src="chickenmacaronisalad img.jfif" alt="chickenmacaronisalad img"><span id="saladfont">Chicken Macaroni Salad</span></span></div>
+                  <div class="row" id="saladrow"><span><img src="gardensalad img.jfif" alt="gardensalad img"><span id="saladfont">Garden Salad</span></span></div>
+                  <div class="row" id="saladrow"><span><img src="kanisalad img.jpg" alt="kanisalad img"><span id="saladfont">Kani Salad</span></span></div>
+                  <div class="row" id="saladrow"><span><img src="greeksalad img.jfif" alt="greeksalad img"><span id="saladfont">Greek Salad</span></span></div>
+                  <div class="row" id="saladrow"><span><img src="potatosalad img.jpg" alt="potatosalad img"><span id="saladfont">Potato Salad</span></span></div>
+                  <div class="row" id="saladrow"><span><img src="zoeyfavesalad img.jpg" alt="zoeyfavesalad img"><span id="saladfont">Zoey's Fave Salad</span></span></div>
+                  <div class="row" id="saladrow"><span><img src="summersalad img.webp" alt="summersalad img"><span id="saladfont">Summer Salad</span></span></div>
+                  <div class="row" id="saladrow"><span><img src="chickencaesarspastasalad img.jpg" alt="chickencaesarspastasalad img"><span id="saladfont">Chicken Caesar's Pasta Salad</span></span></div>
+                  <br>
+                </div>    
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="padding: 2vh; text-align: justify;"><h5>Additional Dish - if you want to have 2 or more Salad dishes instead of just 1, add the following rates below to your chosen price/per pax contract:</h5>
+          <ul style="padding-left: 6vh; padding-right: 6vh; text-align: justify;">
+            <li>Salad - add Php70 per person</li>
+          </ul>
+          <h6 style="text-align: justify;">Ex: Chosen price/per pax contract: Php340 (100-125pax), add Php70 per pax to have 2 Salad Dishes instead of just 1</h6>
+          <h6>Total Price per Pax = Php410 per pax</h6>
+        </div>      
+    </div>  
+        </div>
+        <!---FOURTH TAB Dessert-------------------------------------------------------->     
+        <div id="dessert" class="tabcontent">
+    <!---Dessert COLUMN-->      
+    <div class="container" id="dessertcontainer">
+      <div class="row" style="padding: 2vh; text-align: center;"><h5>2 Dessert Dishes Included. Options are the following below: </h5></div>
+      <div class="row">
+        <div class="col-12 border">
+          <div class="row" id="dessertheader"><p>DESSERT</p><br>
+          </div>
+            <div class="salad">
+              <div class="row">
+                <div class="col-6 border">
+                  <div class="row" id="dessertrow"><span><img src="carrotwalnutbars img.jfif" alt="carrotwalnutbars img"><span id="dessertfont">Carrot Walnut Bars</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="oreocheesecakebars img.jpg" alt="oreocheesecakebars img"><span id="dessertfont">Oreo Cheesecake Bars</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="chocolatemoistbars img.jpg" alt="chocolatemoistbars img"><span id="dessertfont">Chocolate Moist Bars</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="mangocheesecakebars img.jpg" alt="mangocheesecakebars img"><span id="dessertfont">Mango Cheesecake Bars</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="trufflebars img.jpg" alt="trufflebars img"><span id="dessertfont">Truffle Bars</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="redvelvetbars img.jpg" alt="redvelvetbars img"><span id="dessertfont">Red Velvet Bars</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="blackforestbars img.jpg" alt="blackforestbars img"><span id="dessertfont">Black Forest Bars</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="heavenlychocolatebars img.jpg" alt="heavenlychocolatebars img"><span id="dessertfont">Heavenly Chocolate Bars</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="chococoffeecakebars img.jpg" alt="chococoffeecakebars img"><span id="dessertfont">Choco Coffee Cake Bars</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="bakedblueberrycheesecakebars img.jfif" alt="bakedblueberrycheesecakebars img"><span id="dessertfont">Baked Blueberry Cheesecake Bars</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="creampuffs img.jpg" alt="creampuffs img"><span id="dessertfont">Cream Puffs</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="eclairs img.webp" alt="eclairs img"><span id="dessertfont">Eclairs</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="grandmasbibingka img.jfif" alt="grandmasbibingka img"><span id="dessertfont">Grandma's Bibingka</span></span></div>
+                  <br>
+                </div>
+                <div class="col-6 border">
+                  <div class="row" id="dessertrow"><span><img src="freshtropicalfruits img.jfif" alt="freshtropicalfruits img"><span id="dessertfont">Fresh Tropical Fruits</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="minicheesecupcakes img.jpg" alt="minicheesecupcakes img"><span id="dessertfont">Mini Cheese Cupcakes</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="minibananacrumbsmuffins img.jpg" alt="minibananacrumbsmuffins img"><span id="dessertfont">Mini Banana Crumb Muffins</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="appletarts img.jfif" alt="appletarts img"><span id="dessertfont">Apple Tarts</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="chocolatetarts img.jpg" alt="chocolatetarts img"><span id="dessertfont">Chocolate Tarts</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="chocofudgebars img.jpg" alt="chocofudgebars img"><span id="dessertfont">Choco Fudge Bars</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="fruitandnutbrownies img.png" alt="fruitandnutbrownies img"><span id="dessertfont">Fruit & Nut Brownies</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="revelbars img.jfif" alt="revelbars img"><span id="dessertfont">Revel Bars</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="smoresbrowniebars img.webp" alt="smoresbrowniebars img"><span id="dessertfont">Smores Brownie Bars</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="brookiebars img.jpg" alt="brookiebars img"><span id="dessertfont">Brookie Bars</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="lecheflan img.jpg" alt="lecheflan img"><span id="dessertfont">Leche Flan</span></span></div>
+                  <div class="row" id="dessertrow"><span><img src="mangotapioca img.webp" alt="mangotapioca img"><span id="dessertfont">Mango Tapioca</span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="row" style="padding: 2vh; text-align: justify;"><h5>Additional Dish - if you want to have 3 or more Dessert dishes instead of just 2, add the following rates below to your chosen price/per pax contract:</h5>
+        <ul style="padding-left: 6vh; padding-right: 6vh; text-align: justify;">
+          <li>Dessert - add Php30 per person</li>
+        </ul>
+        <h6 style="text-align: justify;">Ex: Chosen price/per pax contract: Php340 (100-125pax), add Php30 per pax to have 3 Salad Dishes instead of just 2</h6>
+        <h6>Total Price per Pax = Php370 per pax</h6>
+      </div>      
+    </div>      
+        </div>
+        <!---FIFTH TAB Beverage-------------------------------------------------------->       
+        <div id="beverage" class="tabcontent">
+  <!---Beverage COLUMN-->
+    <div class="container" id="beveragecontainer">
+      <div class="row" style="padding: 2vh; text-align: center;"><h5>1 Beverage Included.<br>Options are the following below: </h5></div>
+      <div class="row">
+        <div class="col border">
+          <div class="row" id="beverageheader"><p>BEVERAGE</p><br>
+          </div>
+            <div class="row">
+              <div class="col">
+                <div class="beverage"><br>
+                  <div class="row" id="beveragerow"><span><img src="softdrinks img.jfif" alt="softdrinks img"><span id="beveragefont">Softdrinks</span></span></div>
+                  <div class="row" id="beveragerow"><span><img src="juice img.jfif" alt="juice img"><span id="beveragefont">Juice</span></span></div>
+                  <div class="row" id="beveragerow"><span><img src="icedtea img.jpg" alt="icedtea img"><span id="beveragefont">Iced Tea</span></span></div>
+                  <br>
+                </div>    
+              </div>
+            </div>
+        </div>
+      </div>
+        <div class="row" style="padding-top: 2vh; text-align: justify;"><h5>Additional Drinks - if you want additional Drinks, add the following rates below to the grand total amount of your contract:</h5>
+          <div id="additionalbeverage" style="padding-left: 1vw; padding-right: 1vw;">
+            <table class="table table-hover" style="font-size: 2.5vh; text-align: justify;">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 8vw;">Price/Rate</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Php1,500</td>
+                  <td>30 cups brewed coffee for 4 hours</td>
+                </tr>
+                <tr>
+                  <td>Php1,500</td>
+                  <td>Coffee Station good for approx. 30pax for 4 hours. Includes 3in1 coffee sachet, milo sachet, coffee sticks and tea</td>
+                </tr>
+                <tr>
+                  <td>Php2,000</td>
+                  <td>1 Jar of Juice good for appox. 50 cups (choice of 4 seasons / orange / pineapple / iced tea)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><br><br>
+          
+          <h6 style="text-align: justify;">Ex: Chosen price/per pax contract: Php480/pax for 30-35pax (if 30pax= Php14,400), add Php1,500 to have additional 30 cups of brewed coffee</h6><br>
+          <div style="padding-left: 2vw; padding-right: 2vw;">
+            <h6>Contract + 30cups brewed coffee: Php14,400 + Php1,500 = <b><u>Php15,900</u></b></h6>
+          </div>
+        </div>      
+    </div>  
+        </div>
+        <!---SIXTH TAB Kiddie Meal Packages-------------------------------------------->
+        <div id="kiddiemealpackages" class="tabcontent">    
+        <div class="container" id="kiddiemealpackagescontainer">
+        <div class="row" style="padding-top: 3vh;">
+            <span>
+            <ul>
+                <li>Inclusive of small kiddie chairs and tables</li>
+                <li>Kiddie Meals are only add-ons</li>
+                <li>Kiddie Meals are not included in the number of total guests count for determining catering rate</li>
+            </ul>
+            </span>
+            <h4>2 sets are available to choose from , Set A or Set B</h4>
+        </div>
+        <div class="row">
+        <!---Kiddie Meal Packages FIRST COLUMN-->
+            <div class="col-6 border">
+            <div class="row" id="kiddiemealpackagesheader">
+                <p>Set A = <b><u>Php220</u></b> per head</p><br>
+                <p>Each Set A includes the following:</p><br>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                <div class="setA"><br>
+                    <div class="row" id="kiddiemealpackagesrow"><span><img src="zoeyfriedchickenorchickenstripsorchickennuggets img.jpg" alt="zoeyfriedchickenorchickenstripsorchickennuggets img"><span id="kiddiemealpackagesfont">Zoey's Fried Chicken or Crispy Chicken Strips or Chicken Nuggets</span></span></div>
+                    <div class="row" id="kiddiemealpackagesrow"><span><img src="spaghetti img.jpg" alt="spaghetti img"><span id="kiddiemealpackagesfont">Spaghetti</span></span></div>
+                    <div class="row" id="kiddiemealpackagesrow"><span><img src="rice img.jfif" alt="rice img"><span id="kiddiemealpackagesfont">Rice</span></span></div>
+                    <div class="row" id="kiddiemealpackagesrow"><span><img src="juiceoricetea.jpg" alt="juiceoricedtea img"><span id="kiddiemealpackagesfont">Juice or Iced Tea</span></span></div>
+                </div>    
+                </div>
+            </div>
+            </div>
+            <!---Kiddie Meal Packages SECOND COLUMN-->  
+            <div class="col-6 border">
+            <div class="row" id="kiddiemealpackagesheader">
+                <p>Set B = <b><u>Php250</u></b> per head</p><br>
+                <p>Each Set B includes the following:</p><br>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                <div class="setB"><br>
+                    <div class="row" id="kiddiemealpackagesrow"><span><img src="zoeyfriedchickenorchickenstripsorchickennuggets img.jpg" alt="zoeyfriedchickenorchickenstripsorchickennuggets img"><span id="kiddiemealpackagesfont">Zoey's Fried Chicken or Crispy Chicken Strips or Chicken Nuggets</span></span></div>
+                    <div class="row" id="kiddiemealpackagesrow"><span><img src="spaghettiorcarbonara.jpg" alt="spaghettiorcarbonara img"><span id="kiddiemealpackagesfont">Spaghetti or Carbonara</span></span></div>
+                    <div class="row" id="kiddiemealpackagesrow"><span><img src="friesornachos img.jpg" alt="friesornachos img"><span id="kiddiemealpackagesfont">Fries or Nachos</span></span></div>
+                    <div class="row" id="kiddiemealpackagesrow"><span><img src="rice img.jfif" alt="rice img"><span id="kiddiemealpackagesfont">Rice</span></span></div>
+                    <div class="row" id="kiddiemealpackagesrow"><span><img src="juiceoricetea.jpg" alt="juiceoricedtea img"><span id="kiddiemealpackagesfont">Juice or Iced Tea</span></span></div>
+                </div>    
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="row" style="padding: 2vh; text-align: justify;"><h5>Additional Kiddie Meals - if you want to have additional Kiddie Meals, add the rates below to your chosen price/per pax contract:</h5>
+            <ul style="padding-left: 6vh; padding-right: 6vh; text-align: justify;">
+            <li>Set A - add Php220 per head</li>
+            <li>Set B - add Php250 per head</li>
+            </ul>
+            <h6 style="text-align: justify;">Ex: Chosen price/per pax contract: Php340 (100-125pax), add Php220 per head to have additional Kiddie Meal Set A</h6>
+            <h6>Total Price per Pax = <b>Php340</b> per pax + <b>Php220</b> per head Kiddie Meal Set A</h6>
+        </div>      
+        </div>
+        </div>
+    </div>
+</div>
+<!---END of Header Tabs--->    
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<!---END OF CONTENT---->
+<!---START OF FOOTER--->
+    <div class="footer" id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12" id="foodpandagrabcolumn">
+                    <div class="card" id="foodpandagrabcard">
+                        <a href="https://www.foodpanda.ph/restaurant/fsk2/zoey-cafe-ubaldo" target="_blank" id="foodpandahyperlink">
+                            <img class="card-img-top" style="width:100%; height: 30vh; background-image:url('foodpanda.webp'); background-size: cover; background-position-y: center;">
+                        <div class="card-body">
+                            <center><h6 class="card-title">Order from FoodPanda</h6></center></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12" id="foodpandagrabcolumn">
+                    <div class="card" id="foodpandagrabcard">
+                        <a href="https://food.grab.com/ph/en/restaurant/zoey-cafe-co-ubaldo-laya-delivery/2-C3KEBE2YSA63TN" target="_blank" id="grabhyperlink">
+                            <img class="card-img-top" style="width:100%; height: 30vh; background-image:url('grab.png'); background-size: cover; background-position-y: top;">
+                        <div class="card-body">
+                            <center><h6 class="card-title">Order from GrabFood</h6></center></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <p style="color: white;">_______________________________</p>
+                    <h6 class="text-white">HEADQUARTERS</h6>
+                    <p class="text-white"><b>Zoey Café Co., Commisary</b></p>
+                    <p class="text-white">#008 Woodcock Rd Isabel Village Pala-o, Iligan City, Philippines 9200</p>
+                    <i class='fa fa-envelope-o' style="color: white; font-size: 2.5vh; padding-right: 2vw;"></i><a href= "mailto:zoey_cafe@yahoo.com" style="color: white;">zoey_cafe@yahoo.com</a><br>
+                    <i class='fa fa-phone' style="color: white; font-size: 3vh; padding-right: 2vw;"></i><a href="tel:+632280644" style="color: white;">(063) 228 0644</a><br>
+                    <i class='fa fa-mobile-phone' style="color: white; font-size: 5vh; padding-right: 2vw;"></i><a href="tel:+639177084448" style="color: white;">(0917) 708 4448</a><br><br>
+                    <a href="https://www.google.com/maps/dir//Zoey+Caf%C3%A9+Commissary,+008+Woodcock+Road+Isabel+Village,+Iligan+City/@8.2261217,124.2561966,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x325577d0957e3643:0xf0187b5944ada887!2m2!1d124.2583859!2d8.2260951" class="text-white" target="_blank">
+                        <i class="fa fa-location-arrow" style="color: white; padding-left: 0; padding-right: 2vw; font-size: 3vh"></i>Get Directions
+                    </a><br><br>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="row" id="rowfollowus">
+                        <p style="color: white;">_______________________________</p>
+                        <h3 style="color: white;">Follow Us:</h3><br>
+                        <span style="margin: 0; padding-top: 1vh;">
+                            <a href="https://www.facebook.com/zoeycafe/" target="_blank"><i class="fa fa-facebook" style="font-size: 4vh; padding-left: 0;"></i></a>
+                            <a href="https://www.instagram.com/zoeycafe/?hl=en" target="_blank"><i class="fa fa-instagram"  style="font-size: 4vh; padding-left: 2vh;"></i></a>
+                        </span>
+                    </div><br>  
+                    <div class="row" style="padding-top: 1vh; padding-bottom: 2vh;">
+                        <h6 style="color: white;">Want to Receive News & Promos?</h6>
+                        <form class="form-floating was-validated">
+                            <label for="floatingemailform" class="form-label"></label>
+                                <input type="email" class="form-control" id="floatingemailform" placeholder="name@example.com" value="" required>
+                                <label for="floatingemailform" style="margin-left: 6px;">Email</label>
+                                <div class="valid-feedback"> Valid </div>
+                                <div class="invalid-feedback" style="font-size: 2vh;">Please fill out this field to get News & Promos</div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                    <label class="form-check-label" for="invalidCheck" style="color: white; padding-bottom: 0; padding-top: 0;">Yes! I want to receive news & promos</label>
+                                    <div class="invalid-feedback" style="font-size: 2vh; margin-left: 0;">You must agree before submitting.</div>
+                            </div>
+                            <button class="btn" type="submit">SUBMIT</button>
+                        </form>
+                    </div>
+                </div>
+        <p id="copyright">© Copyright 2022 Zoey Café, Co.</p>
+    </div>
+<!---END OF FOOTER--->       
+
+<!---JS SCRIPTS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<!---JS SCRIPTS for TOGGLE WINDOWS-->    
+<script>toggleables.forEach((toggleable) => {
+    toggleable.addEventListener('click', toggleImage);
+    });
+    // Hide all elements with class="containerTab", except for the one that matches the clickable grid column
+    function openTab(tabName) {
+        var i, x;
+        x = document.getElementsByClassName("containerTab");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+    }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+      crossorigin="anonymous">
+     </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+      crossorigin="anonymous">
+     </script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+      crossorigin="anonymous">
+     </script>
+<!---JS SCRIPTS for TOGGLE TABS MENU-->         
+<script>
+function openPage(pageName, elmnt, color) {
+// Hide all elements with class="tabcontent" by default */
+var i, tabcontent, tablinks;
+tabcontent = document.getElementsByClassName("tabcontent");
+for (i = 0; i < tabcontent.length; i++) {
+tabcontent[i].style.display = "none";
+}
+// Remove the background color of all tablinks/buttons
+tablinks = document.getElementsByClassName("tablink");
+for (i = 0; i < tablinks.length; i++) {
+tablinks[i].style.backgroundColor = "";
+}
+// Show the specific tab content
+document.getElementById(pageName).style.display = "block";
+// Add the specific color to the button used to open the tab content
+elmnt.style.backgroundColor = color;
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>
