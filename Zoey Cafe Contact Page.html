@@ -219,7 +219,7 @@
                   <input type="reset" value="RESET" id="formbuttons" style="float: right;">
                 </div><br><br>
                 <div class="col-50">
-                  <input type="submit" value="SUBMIT" id="formbuttons">
+                  <input type="submit" value="SUBMIT" id="formbuttons" onclick="alert ('Thank you. Your form was successfully submitted. You will receive a confirmation on your email.')">
                   <input type="hidden" name="_next" value="https://mayenr.github.io/zoey-final/Zoey%20Cafe%20Contact%20Page.html">
                   <input type="hidden" name="_autoresponse" value="Thank you for your interest in Zoey Café Catering Services. Please expect us to contact you using the details you have provided us, the date and time, and the mode of your preference. We look forward to discussing all your needs and meeting your expectations. Thank you and have a good day.">
                 </div>
@@ -338,7 +338,7 @@
         function thankyou() {
             alert ('Thank you. Your form was successfully submitted. You will receive a confirmation on your email.');
         }
-        document.getElementById("button").onclick = thankyou;
+        document.getElementById("formbuttons").onclick = thankyou;
     </script>
   <!---END JS Alert Function for Form Submit Success--->
                     
