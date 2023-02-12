@@ -91,7 +91,7 @@
         <div class="row">
           <div class="container" >
             <!---------raggahmuffet02@gmail.com-------->
-            <form action="https://formsubmit.co/vanityprincessdavao@gmail.com" method="POST" class="was-validated">
+            <form action="https://formsubmit.co/vanityprincessdavao@gmail.com" method="POST" class="was-validated" name="myForm" onsubmit="return validateForm()">
               <div class="row">
                 <div class="col-25">
                   <label for="fname">FIRST NAME</label>
@@ -136,7 +136,7 @@
                   <label for="event">EVENT</label>
                 </div>
                 <div class="col-75">
-                  <input type="text" class="form-control" id="event" placeholder="Ex. Birthday Party" style="width: inherit;" required></text>
+                  <input type="text" class="form-control" id="event" name="event" placeholder="Ex. Birthday Party" style="width: inherit;" required></text>
                 </div>
               </div><br>
               <div class="row">
@@ -211,7 +211,7 @@
                 <div class="col-75">
                   <div class="form-check">
                     <p style="font-size: 1.3vh; padding-bottom: 0; margin-bottom: 0;">Privacy Policy</p>
-                    <input class="form-check-input" type="checkbox" value="" id="checkbox" required>
+                    <input class="form-check-input" type="checkbox" name="agree" value="" id="checkbox" required>
                     <label class="form-check-label" for="checkbox" style="font-size: 1.5vh; padding-top: 0; margin-top: 0;">I agree and consent to the use of my submitted information in accordance with the Data Privacy Policy and Cookies Policy of Zoey Cafe, Co.</label> 
                   </div>
                 </div>
@@ -221,9 +221,24 @@
                   <input type="reset" value="RESET" id="formbuttons" style="float: right;">
                 </div><br><br>
                 <div class="col-50">
-                  <input type="submit" value="SUBMIT" id="formbuttons" onclick="alert ('Thank you. Your form was successfully submitted. You will receive a confirmation on your email.')">
+                  <input type="submit" value="SUBMIT" id="formbuttons">
                   <input type="hidden" name="_next" value="https://mayenr.github.io/zoey-final/">
                   <input type="hidden" name="_autoresponse" value="Thank you for your interest in Zoey Café Catering Services. Please expect us to contact you using the details you have provided us, the date and time, and the mode of your preference. We look forward to discussing all your needs and meeting your expectations. Thank you and have a good day.">
+                
+                <script>
+                    function validateForm() {
+                      var x = document.forms["myForm"]["firstname"]["lastname"]["phone"]["email"]["event"]["venue"]["dateandtime"]["pax"]["colortheme"]["message"]["modeofcontact"]["agree"].value;
+                        if (x == "" || x == null) {
+                          alert("Please fill out all required fields.");
+                            return false;
+                        }
+                        else {
+                          alert ("Thank you. Your form was successfully submitted. You will receive a confirmation on your email.");
+                        }
+                      }
+                    </script>
+                
+                
                 </div>
               </div>
             </form>
